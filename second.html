@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Importante</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873563554"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17873563554');
+    </script>
+    <style>
+        /* ISSO AQUI CORRIGE O PROBLEMA DO BOTÃO SAIR PRA FORA */
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid #ffcc00;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        .alert-icon { font-size: 40px; margin-bottom: 15px; }
+
+        h1 {
+            font-size: 22px; /* Diminuí um pouco a fonte do título */
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+            font-weight: 800;
+            color: #ffcc00;
+        }
+
+        .headline {
+            font-size: 15px;
+            color: #eee;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .highlight {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .age-gate {
+            background: #252525;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            margin-bottom: 10px;
+        }
+
+        .age-text {
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        /* BOTÃO PEQUENO E CENTRALIZADO */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block; /* Não ocupa a linha toda */
+            width: auto; /* Tamanho automático baseado no texto */
+            padding: 12px 30px; /* Espaçamento interno menor */
+            background-color: #28a745; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #218838; 
+        }
+
+        .legal-footer {
+            width: 100%;
+            background-color: #080808;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #555;
+            border-top: 1px solid #1a1a1a;
+            margin-top: auto;
+        }
+
+        .legal-footer p { margin: 5px 0; }
+        .legal-footer strong { color: #777; }
+        
+        .legal-links { margin: 15px 0; }
+        .legal-links a {
+            color: #777;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover { color: #aaa; }
+
+        .disclaimer-box {
+            max-width: 700px;
+            margin: 15px auto 0 auto;
+            line-height: 1.4;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="alert-icon">⚠️</div>
+            
+            <h1>ATENÇÃO</h1>
+            
+            <p class="headline">
+                A apresentação a seguir revela um método controverso utilizando <span class="highlight">bicarbonato de sódio</span>.
+            </p>
+
+            <div class="age-gate">
+                <p class="age-text">
+                    Antes de prosseguir precisamos ter certeza se você é maior de 18 anos 🔞
+                    <br><br>
+                    <span style="color: #fff; font-weight: bold; font-size: 14px;">Você confirma ter mais de 18 anos?</span>
+                </p>
+
+                <div class="btn-container">
+                    <a href="aula.html" class="btn">SIM, CONFIRMO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="legal-footer">
+        <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
+        <p>CNPJ: 50.996.379/0001-00</p>
+        <p>Contato: suporte@protocolonatural.com</p>
+
+        <div class="legal-links">
+            <a href="#">Políticas de Privacidade</a> | 
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Contato</a>
+        </div>
+
+        <div class="disclaimer-box">
+            <p>Isenção de responsabilidade: Este site não é afiliado ao Facebook, Google ou qualquer entidade de mídia social. Os resultados podem variar de pessoa para pessoa e dependem da dedicação de cada indivíduo. As informações contidas neste site destinam-se ao seu conhecimento geral e não substituem o acompanhamento médico.</p>
+            <p>© 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
