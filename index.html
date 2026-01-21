@@ -3,128 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviso de Conteúdo Restrito</title>
+    <title>Aviso Importante</title>
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873478836"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873563554"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-17873478836');
-    </script>
 
+      gtag('config', 'AW-17873563554');
+    </script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a; /* Fundo Escuro (Passa ar de "Proibido/Noite") */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d0d0d;
             color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
         }
 
-        .container {
-            background-color: #252525;
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            max-width: 480px;
-            padding: 40px 25px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            text-align: center;
-            border-top: 5px solid #c4170c; /* Tarja Vermelha de Alerta */
+            padding: 20px;
         }
 
-        .icon-alert {
-            font-size: 50px;
-            margin-bottom: 20px;
-            color: #c4170c;
+        .container {
+            background-color: #1a1a1a;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid #ffcc00;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
+
+        .alert-icon { font-size: 40px; margin-bottom: 15px; }
 
         h1 {
-            font-size: 26px;
+            font-size: 24px;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin: 0 0 20px 0;
             font-weight: 800;
-            letter-spacing: 1px;
+            color: #ffcc00;
         }
 
-        p {
-            font-size: 15px;
-            color: #ccc;
+        .headline {
+            font-size: 16px;
+            color: #eee;
             line-height: 1.5;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .highlight {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
-        .warning-box {
-            background: rgba(196, 23, 12, 0.1);
-            border: 1px solid #c4170c;
-            color: #ffcccc;
-            padding: 15px;
-            font-size: 13px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-            text-align: left;
+        .age-gate {
+            background: #252525;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .age-text {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
         .btn {
             display: block;
             width: 100%;
-            padding: 18px;
-            background: linear-gradient(to bottom, #c4170c, #900d05); /* Botão Vermelho Sangue */
+            padding: 16px;
+            background: #28a745;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             font-size: 18px;
-            font-weight: 900;
+            font-weight: bold;
             cursor: pointer;
             text-decoration: none;
-            text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(196, 23, 12, 0.4);
-            animation: pulse 2s infinite;
+            box-shadow: 0 4px 0 #1e7e34;
+            transition: transform 0.1s;
         }
 
-        .btn:hover {
-            background: linear-gradient(to bottom, #d61f14, #a81209);
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #1e7e34;
         }
 
-        .small-text {
-            margin-top: 20px;
+        .legal-footer {
+            width: 100%;
+            background-color: #080808;
+            padding: 30px 20px;
+            text-align: center;
             font-size: 11px;
             color: #555;
+            border-top: 1px solid #1a1a1a;
+            margin-top: auto;
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(196, 23, 12, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(196, 23, 12, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(196, 23, 12, 0); }
+        .legal-footer p { margin: 5px 0; }
+        .legal-footer strong { color: #777; }
+        
+        .legal-links { margin: 15px 0; }
+        .legal-links a {
+            color: #777;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover { color: #aaa; }
+
+        .disclaimer-box {
+            max-width: 700px;
+            margin: 15px auto 0 auto;
+            line-height: 1.4;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="icon-alert">🔞</div>
-        
-        <h1>Conteúdo Restrito</h1>
-        
-        <p>A apresentação a seguir revela um método controverso de ativação biológica masculina.</p>
+    <div class="main-content">
+        <div class="container">
+            <div class="alert-icon">⚠️</div>
+            
+            <h1>ATENÇÃO</h1>
+            
+            <p class="headline">
+                A apresentação a seguir revela um método controverso utilizando <span class="highlight">bicarbonato de sódio</span>.
+            </p>
 
-        <div class="warning-box">
-            <strong>⚠️ ATENÇÃO:</strong> As informações contidas no vídeo podem desafiar crenças médicas tradicionais. O conteúdo é direto e sem censura sobre vigor físico.
-        </div>
+            <div class="age-gate">
+                <p class="age-text">
+                    Antes de prosseguir precisamos ter certeza se você é maior de 18 anos 🔞
+                </p>
+                
+                <p style="font-size: 15px; font-weight: bold; margin-bottom: 15px; color: #fff;">
+                    Você confirma ter mais de 18 anos?
+                </p>
 
-        <p style="font-size: 14px; font-weight: bold; color: #fff;">Você confirma ter mais de 18 anos?</p>
-
-        <a href="aula.html" class="btn">SIM, QUERO VER O VÍDEO 🔓</a>
-
-        <div class="small-text">
-            Este site utiliza cookies. Ao continuar, você concorda com nossa política de privacidade.<br>
-            © 2026 Dropixes Ltda.
+                <a href="aula.html" class="btn">SIM, QUERO VER O CONTEÚDO</a>
+            </div>
         </div>
     </div>
+
+    <footer class="legal-footer">
+        <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
+        <p>CNPJ: 50.996.379/0001-00</p>
+        <p>Contato: suporte@protocolonatural.com</p>
+
+        <div class="legal-links">
+            <a href="#">Políticas de Privacidade</a> | 
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Contato</a>
+        </div>
+
+        <div class="disclaimer-box">
+            <p>Isenção de responsabilidade: Este site não é afiliado ao Facebook, Google ou qualquer entidade de mídia social. Os resultados podem variar de pessoa para pessoa e dependem da dedicação de cada indivíduo. As informações contidas neste site destinam-se ao seu conhecimento geral e não substituem o acompanhamento médico.</p>
+            <p>© 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
