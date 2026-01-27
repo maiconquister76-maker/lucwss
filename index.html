@@ -14,7 +14,7 @@
       gtag('config', 'AW-17873563554');
     </script>
     <style>
-        /* ISSO AQUI CORRIGE O PROBLEMA DO BOTÃO SAIR PRA FORA */
+        /* CSS RESET */
         * { box-sizing: border-box; }
 
         body {
@@ -53,7 +53,7 @@
         .alert-icon { font-size: 40px; margin-bottom: 15px; }
 
         h1 {
-            font-size: 22px; /* Diminuí um pouco a fonte do título */
+            font-size: 22px;
             text-transform: uppercase;
             margin: 0 0 15px 0;
             font-weight: 800;
@@ -90,16 +90,16 @@
             margin-bottom: 15px;
         }
 
-        /* BOTÃO PEQUENO E CENTRALIZADO */
+        /* BOTÃO FLAT PEQUENO E CENTRALIZADO */
         .btn-container {
             display: flex;
             justify-content: center;
         }
 
         .btn {
-            display: inline-block; /* Não ocupa a linha toda */
-            width: auto; /* Tamanho automático baseado no texto */
-            padding: 12px 30px; /* Espaçamento interno menor */
+            display: inline-block;
+            width: auto;
+            padding: 12px 30px;
             background-color: #28a745; 
             color: white;
             border: none;
@@ -166,7 +166,7 @@
                 </p>
 
                 <div class="btn-container">
-                    <a href="aula.html" class="btn">SIM, CONFIRMO</a>
+                    <a href="aula.html" class="btn" id="prosseguir">SIM, CONFIRMO</a>
                 </div>
             </div>
         </div>
@@ -188,6 +188,28 @@
             <p>© 2026 Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Pega todos os parâmetros da URL atual (ex: ?gclid=123&utm_source=google)
+            const urlParams = window.location.search;
+            
+            // Seleciona o botão pelo ID
+            const btn = document.getElementById('prosseguir');
+            
+            // Se existirem parâmetros na URL e o botão existir
+            if (urlParams && btn) {
+                // Verifica se o link original já tem '?'
+                // Se o link for só "aula.html", ele adiciona o urlParams direto
+                if (btn.href.indexOf('?') === -1) {
+                    btn.href = btn.href + urlParams;
+                } else {
+                    // Se o link já tivesse algo tipo aula.html?v=1, ele adicionaria com &
+                    btn.href = btn.href + '&' + urlParams.substring(1);
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
