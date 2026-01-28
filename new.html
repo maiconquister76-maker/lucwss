@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo Exclusivo</title>
+    <title>Aviso Importante</title>
     
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,127 +19,118 @@
     </script>
 
     <style>
-        /* CSS RESET & FONTS */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-
+        /* CSS RESET */
         * { box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif; /* Fonte moderna usada por Startups */
-            background-color: #f4f7f6; /* Cinza muito claro, chique */
-            color: #333;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d0d0d; /* Fundo DARK original */
+            color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
         }
 
-        .main-wrapper {
+        .main-content {
             flex: 1;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
             padding: 20px;
         }
 
-        .card {
-            background-color: #ffffff;
+        .container {
+            background-color: #1a1a1a; /* Caixa cinza escuro */
             width: 100%;
-            max-width: 500px;
+            max-width: 450px;
             padding: 40px 30px;
-            border-radius: 16px; /* Bordas bem arredondadas (Moderno) */
+            border-radius: 8px;
             text-align: center;
-            /* Sombra suave e difusa (Estilo Apple/Stripe) */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
-            border: 1px solid #eaeaea;
+            border-top: 4px solid #ffcc00; /* Borda Amarela de Alerta */
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
 
-        .icon-header {
-            font-size: 48px;
-            margin-bottom: 20px;
-            display: block;
-        }
+        .alert-icon { font-size: 40px; margin-bottom: 20px; }
 
         h1 {
-            font-size: 26px;
+            font-size: 22px;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
             font-weight: 800;
-            color: #111;
-            margin: 0 0 15px 0;
-            line-height: 1.3;
-            letter-spacing: -0.5px;
+            color: #ffcc00; /* Título Amarelo */
         }
 
         p {
             font-size: 16px;
-            color: #555;
+            color: #eee;
             line-height: 1.6;
-            margin-bottom: 35px;
-            font-weight: 400;
+            margin-bottom: 30px;
+            font-weight: 500;
         }
 
-        /* O TEXTO DESTACADO */
+        /* TEXTO DESTACADO */
         .highlight {
-            color: #2563EB; /* Azul Royal Moderno */
-            font-weight: 700;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
-        /* BOTÃO MODERNO */
+        /* BOTÃO FLAT VERDE (LISO) - Como no original */
         .btn-container {
+            display: flex;
+            justify-content: center;
             width: 100%;
         }
 
         .btn {
             display: block;
             width: 100%;
-            padding: 18px;
-            background-color: #10B981; /* Verde "Emerald" Moderno */
+            padding: 16px;
+            background-color: #28a745; /* Verde Sólido */
             color: white;
             border: none;
-            border-radius: 12px; /* Botão bem arredondado */
+            border-radius: 6px;
             font-size: 18px;
-            font-weight: 700;
+            font-weight: bold;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transition: background-color 0.2s;
         }
 
         .btn:hover {
-            background-color: #059669;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(16, 185, 129, 0.4);
+            background-color: #218838; 
         }
 
-        .btn small {
-            display: block;
-            font-size: 12px;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-top: 4px;
-        }
-
-        /* RODAPÉ LIMPO */
+        /* RODAPÉ DARK */
         .legal-footer {
             width: 100%;
+            background-color: #080808;
             padding: 30px 20px;
             text-align: center;
             font-size: 11px;
-            color: #999;
-            background-color: transparent;
+            color: #555;
+            border-top: 1px solid #1a1a1a;
+            margin-top: auto;
         }
 
         .legal-footer p { margin: 5px 0; }
         .legal-footer strong { color: #777; }
         
+        .legal-links { margin: 15px 0; }
         .legal-links a {
             color: #777;
             text-decoration: none;
-            margin: 0 8px;
+            margin: 0 10px;
+            transition: color 0.3s;
         }
+        .legal-links a:hover { color: #aaa; }
     </style>
 </head>
 <body>
@@ -147,21 +138,18 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RHJ85LC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <div class="main-wrapper">
-        <div class="card">
-            <div class="icon-header">⚡</div>
+    <div class="main-content">
+        <div class="container">
+            <div class="alert-icon">⚠️</div>
             
-            <h1>O Truque do <br><span class="highlight">Bicarbonato de Sódio</span></h1>
+            <h1>ATENÇÃO</h1>
             
             <p>
-                Clique no botão abaixo para assistir a apresentação <strong>GRATUITA</strong> sobre esse novo método caseiro de ativação.
+                Clique no botão abaixo para assistir a apresentação <strong>GRATUITA</strong> sobre esse novo truque do <span class="highlight">bicarbonato de sódio!</span>
             </p>
 
             <div class="btn-container">
-                <a href="aula.html" class="btn" id="prosseguir">
-                    ASSISTIR APRESENTAÇÃO &raquo;
-                    <small>Toque aqui para liberar o vídeo</small>
-                </a>
+                <a href="aula.html" class="btn" id="prosseguir">ASSISTIR APRESENTAÇÃO</a>
             </div>
         </div>
     </div>
@@ -169,11 +157,16 @@
     <footer class="legal-footer">
         <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
         <p>CNPJ: 50.996.379/0001-00</p>
-        <div class="legal-links" style="margin-top: 10px;">
-            <a href="#">Privacidade</a> • <a href="#">Termos</a> • <a href="#">Contato</a>
+        <p>Contato: suporte@protocolonatural.com</p>
+
+        <div class="legal-links">
+            <a href="#">Políticas de Privacidade</a> | 
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Contato</a>
         </div>
-        <p style="margin-top: 15px; font-size: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Este site não é afiliado ao Google ou Facebook. Os resultados variam de pessoa para pessoa.
+        
+        <p style="margin-top: 15px; font-size: 10px; opacity: 0.6;">
+            Este site não é afiliado ao Google ou Facebook.
         </p>
     </footer>
 
