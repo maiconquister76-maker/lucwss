@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Importante</title>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5RHJ85LC');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873563554"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17873563554');
+    </script>
+
+    <style>
+        /* CSS RESET */
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d0d0d; /* Fondo DARK */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid #ffcc00; /* Alerta Amarillo */
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        .alert-icon { font-size: 40px; margin-bottom: 20px; }
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+            font-weight: 800;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+            color: #eee;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* BOTÓN FLAT VERDE */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #218838; 
+        }
+
+        /* PIE DE PÁGINA (Footer) */
+        .legal-footer {
+            width: 100%;
+            background-color: #080808;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #555;
+            border-top: 1px solid #1a1a1a;
+            margin-top: auto;
+        }
+
+        .legal-footer p { margin: 5px 0; }
+        .legal-footer strong { color: #777; }
+        
+        /* Enlaces Obligatorios */
+        .legal-links { 
+            margin: 20px 0; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .legal-links a {
+            color: #777;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .legal-links a:hover { color: #fff; text-decoration: underline; }
+
+        .disclaimer-box {
+            max-width: 600px;
+            margin: 15px auto 0 auto;
+            line-height: 1.4;
+            font-style: italic;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RHJ85LC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="alert-icon">⚠️</div>
+            
+            <h1>ATENCIÓN</h1>
+            
+            <p>
+                ¡Haga clic en el botón de abajo para ver la presentación <strong>GRATUITA!</strong>
+            </p>
+
+            <div class="btn-container">
+                <a href="aula.html" class="btn" id="prosseguir">VER AHORA</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="legal-footer">
+        <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
+        <p>CNPJ: 50.996.379/0001-00</p>
+        <p>Contacto: suporte@protocolonatural.com</p>
+
+        <div class="legal-links">
+            <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>
+            <a href="terminos-uso.html" target="_blank">Términos de Uso</a>
+            <a href="politica-reembolso.html" target="_blank">Política de Reembolso</a>
+            <a href="aviso-legal.html" target="_blank">Descargo de Responsabilidad</a>
+        </div>
+
+        <div class="disclaimer-box">
+            <p>Este sitio no está afiliado a Google ni a Facebook. Los resultados pueden variar de una persona a otra. La información contenida en este sitio es para fines educativos generales.</p>
+            <p>© 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = window.location.search;
+            const btn = document.getElementById('prosseguir');
+            if (urlParams && btn) {
+                if (btn.href.indexOf('?') === -1) {
+                    btn.href = btn.href + urlParams;
+                } else {
+                    btn.href = btn.href + '&' + urlParams.substring(1);
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
