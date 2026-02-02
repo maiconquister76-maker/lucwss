@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5RHJ85LC');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Protocolo Natural</title>
+    
+    <!-- Vturb Performance Optimization -->
+    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+    <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/698130490d9bb07e86a72c5b/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/69812e7d0d9bb07e86a7287a/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: rgb(26, 26, 26);
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background-color: rgb(196, 23, 12);
+            border: 0;
+            padding: 16px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .wrapper-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .live-stats {
+            font-size: 15px;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .live-stats .qty {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .info-alert {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .info-alert .limit-date {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .main-wrapper {
+            max-width: 800px;
+            margin: 24px auto;
+            padding: 0 20px;
+        }
+
+        .primary-img {
+            display: none; 
+        }
+
+        .media-wrapper {
+            margin: 24px 0;
+            display: block;
+        }
+
+        .audio-alert {
+            margin-top: 12px;
+            padding: 12px;
+            background-color: rgb(240, 242, 245);
+            border-radius: 8px;
+            font-size: 15px;
+            color: rgb(26, 26, 26);
+            text-align: center;
+        }
+
+        .ref-box {
+            margin: 32px auto;
+            max-width: 500px;
+        }
+
+        .ref-head {
+            background-color: rgb(59, 89, 152);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .ref-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            background-color: rgb(240, 242, 245);
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* ===== SEÇÃO DE OFERTAS ===== */
+        .ofertas-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .kit-container {
+            background: linear-gradient(180deg, #1a5a7a 0%, #0d3d54 100%);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            width: 260px;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .kit-destaque {
+            border: 3px solid #FFD700;
+            transform: scale(1.05);
+        }
+
+        .kit-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #c4170c;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .kit-titulo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #FFD700;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .kit-subtitulo {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .kit-imagem {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        .kit-preco {
+            margin: 15px 0;
+        }
+
+        .kit-parcela {
+            font-size: 16px;
+            color: #ffffff;
+            display: block;
+        }
+
+        .kit-valor {
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+
+        .kit-botao {
+            display: block;
+            background-color: #FFD700;
+            color: #000000;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 15px auto;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .kit-botao:hover {
+            background-color: #ffec4d;
+            transform: scale(1.02);
+        }
+
+        .kit-total {
+            font-size: 14px;
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        .kit-frete {
+            font-size: 13px;
+            color: #90EE90;
+            margin: 5px 0;
+        }
+
+        .kit-garantia {
+            font-size: 13px;
+            color: #ffffff;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        .kit-bandeiras {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        /* ===== SEÇÃO GARANTIA BLINDADA ===== */
+        .garantia-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .garantia-container {
+            background-color: #FFF8DC;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .garantia-imagem {
+            flex-shrink: 0;
+        }
+
+        .garantia-imagem img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .garantia-titulo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a5a7a;
+            margin-bottom: 15px;
+        }
+
+        .garantia-texto p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .garantia-texto strong {
+            color: #1a5a7a;
+        }
+
+        /* ===== SEÇÃO FAQ ===== */
+        .faq-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #1a5a7a 0%, #0d4a63 100%);
+            border-radius: 12px;
+        }
+
+        .faq-titulo {
+            text-align: center;
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            border-left: 5px solid #FFD700;
+            overflow: hidden;
+        }
+
+        .faq-pergunta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            color: #1a1a1a;
+        }
+
+        .faq-icon {
+            background-color: #FFD700;
+            color: #1a1a1a;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.ativo .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-resposta {
+            padding: 0 20px 18px 20px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .faq-resposta p {
+            margin-bottom: 10px;
+        }
+
+        .faq-resposta p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .live-stats {
+                font-size: 14px;
+            }
+
+            .info-alert {
+                font-size: 13px;
+            }
+
+            .ofertas-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .kit-container {
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .kit-destaque {
+                transform: scale(1);
+            }
+            
+            .garantia-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .garantia-imagem img {
+                max-width: 200px;
+            }
+
+            .faq-titulo {
+                font-size: 24px;
+            }
+            
+            .faq-pergunta {
+                font-size: 14px;
+                padding: 15px;
+            }
+            
+            .faq-resposta {
+                font-size: 13px;
+                padding: 0 15px 15px 15px;
+            }
+        }
+
+        .btm-bar {
+            background-color: rgb(26, 26, 26);
+            color: white;
+            padding: 48px 20px 24px;
+            margin-top: 64px;
+        }
+
+        .btm-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btm-legal {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RHJ85LC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="top-bar">
+        <div class="wrapper-top">
+            <div class="live-stats">
+                <span class="qty" id="liveUserDisplay">...</span> Pessoas estão assistindo a esse vídeo.
+            </div>
+            <div class="info-alert">
+                Devido a alta demanda de acessos, garantimos a apresentação somente até: <span class="limit-date" id="limitDateDisplay">...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-body">
+        <div class="main-wrapper">
+            <div class="content-box">
+                <div class="media-wrapper">
+                    <vturb-smartplayer id="vid-698130490d9bb07e86a72c5b" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+                    <script type="text/javascript">
+                        var s=document.createElement("script");
+                        s.src="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/698130490d9bb07e86a72c5b/v4/player.js",
+                        s.async=!0,document.head.appendChild(s);
+                    </script>
+                    
+                    <p class="audio-alert">
+                        🔊 Por favor, verifique se o som está ligado.
+                    </p>
+                </div>
+
+                <!-- ===== SEÇÃO DE OFERTAS - SINCRONIZAR COM VTURB ===== -->
+                <!-- ID para VTurb: secao-ofertas | Tempo: 00:01:00 (teste) | Depois mudar para 00:43:29 -->
+                <section id="secao-ofertas" class="ofertas-section" style="display: none;">
+                    
+                    <!-- Kit 10 Meses -->
+                    <div class="kit-container kit-destaque">
+                        <div class="kit-badge">Mais vendido</div>
+                        <h3 class="kit-titulo">10 Frascos</h3>
+                        <p class="kit-subtitulo">Suficiente para 10 meses</p>
+                        <img src="produto-10-frascos.png" alt="Kit 10 Frascos Lord Vigor" class="kit-imagem">
+                        <div class="kit-preco">
+                            <span class="kit-parcela">12x de</span>
+                            <span class="kit-valor">R$ 58,08</span>
+                        </div>
+                        <a href="https://checkout.payt.com.br/d239e36e539c4056681d799900449474" class="kit-botao">COMPRAR AGORA!</a>
+                        <p class="kit-total">Total: R$ 697,00</p>
+                        <p class="kit-frete">Frete Grátis 🚚</p>
+                        <p class="kit-garantia">Garantia de 600 dias</p>
+                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
+                    </div>
+
+                    <!-- Kit 5 Meses -->
+                    <div class="kit-container">
+                        <h3 class="kit-titulo">5 Frascos</h3>
+                        <p class="kit-subtitulo">Suficiente para 5 meses</p>
+                        <img src="produto-5-frascos.jpg" alt="Kit 5 Frascos Lord Vigor" class="kit-imagem">
+                        <div class="kit-preco">
+                            <span class="kit-parcela">12x de</span>
+                            <span class="kit-valor">R$ 33,08</span>
+                        </div>
+                        <a href="https://checkout.payt.com.br/1d76e07dc1f876bff61c865007112c16" class="kit-botao">COMPRAR AGORA!</a>
+                        <p class="kit-total">Total: R$ 397,00</p>
+                        <p class="kit-frete">Frete Grátis 🚚</p>
+                        <p class="kit-garantia">Garantia de 300 dias</p>
+                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
+                    </div>
+
+                    <!-- Kit 3 Meses -->
+                    <div class="kit-container">
+                        <h3 class="kit-titulo">3 Frascos</h3>
+                        <p class="kit-subtitulo">Suficiente para 3 meses</p>
+                        <img src="produto-3-frascos.jpg" alt="Kit 3 Frascos Lord Vigor" class="kit-imagem">
+                        <div class="kit-preco">
+                            <span class="kit-parcela">12x de</span>
+                            <span class="kit-valor">R$ 24,75</span>
+                        </div>
+                        <a href="https://checkout.payt.com.br/7960b7e2252d3c21f57e5bd8cb19801a" class="kit-botao">COMPRAR AGORA!</a>
+                        <p class="kit-total">Total: R$ 297,00</p>
+                        <p class="kit-frete">Frete Grátis 🚚</p>
+                        <p class="kit-garantia">Garantia de 180 dias</p>
+                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
+                    </div>
+
+                    <!-- Kit 1 Mês -->
+                    <div class="kit-container">
+                        <h3 class="kit-titulo">1 Frasco</h3>
+                        <p class="kit-subtitulo">Suficiente para 1 mês</p>
+                        <img src="produto-1-frasco.jpg" alt="Kit 1 Frasco Lord Vigor" class="kit-imagem">
+                        <div class="kit-preco">
+                            <span class="kit-parcela">Por apenas</span>
+                            <span class="kit-valor">R$ 197,00</span>
+                        </div>
+                        <a href="https://checkout.payt.com.br/41fdf13bf63e3172e419af1e164ba4af" class="kit-botao">COMPRAR AGORA!</a>
+                        <p class="kit-total">+ Frete</p>
+                        <p class="kit-garantia">Garantia de 60 dias</p>
+                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
+                    </div>
+
+                </section>
+
+                <!-- ===== SEÇÃO GARANTIA BLINDADA ===== -->
+                <!-- ID para VTurb: garantia-blindada | Mesmo tempo que secao-ofertas -->
+                <section id="garantia-blindada" class="garantia-section" style="display: none;">
+                    <div class="garantia-container">
+                        <div class="garantia-imagem">
+                            <img src="produto-garantia.png" alt="Garantia Lord Vigor">
+                        </div>
+                        <div class="garantia-texto">
+                            <h2 class="garantia-titulo">GARANTIA BLINDADA LORD VIGOR</h2>
+                            <p>Quando você pedir o Lord Vigor, também receberá uma <strong>garantia blindada de 60 dias em cada frasco</strong> para solicitar todo o seu dinheiro de volta.</p>
+                            <p>Estamos tão confiantes que o Lord Vigor vai te trazer resultados, que se você não estiver 100% satisfeito e não notar uma grande melhora na sua qualidade de vida, <strong>nós vamos te devolver até o último centavo pago.</strong></p>
+                            <p>Basta enviar uma mensagem no WhatsApp em até 60 dias a partir da sua compra que faremos a devolução integral do seu dinheiro, <strong>sem qualquer questionamento!</strong></p>
+                            <p>Por isso, faça seu pedido agora. Você não tem absolutamente NADA a perder, e tudo a ganhar.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== SEÇÃO FAQ ===== -->
+                <!-- ID para VTurb: secao-faq | Mesmo tempo que secao-ofertas -->
+                <section id="secao-faq" class="faq-section" style="display: none;">
+                    <h2 class="faq-titulo">DÚVIDAS FREQUENTES</h2>
+                    
+                    <div class="faq-container">
+                        <!-- Pergunta 1 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Já tentei de tudo e nada funcionou. Por que isso seria diferente?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Tudo o que você tentou até hoje trata o sintoma, não a causa. O Viagra força o sangue a ir para o pênis por algumas horas, mas as placas de gordura continuam lá, entupindo sua veia. Por isso você precisa tomar de novo e de novo.</p>
+                                <p>O Lord Vigor é diferente porque ele limpa as veias, remove as placas, desentope de verdade. Não é tapa-buraco. É a solução definitiva.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 2 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Minha mulher já desistiu de mim. Será que ainda dá tempo?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>A mulher nunca desiste do marido. Ela desiste de se frustrar. Toda vez que ela tentou e você falhou, doeu nela também. Ela começou a evitar pra não te machucar e pra não se machucar.</p>
+                                <p>No fundo, ela ainda quer. Ela ainda lembra de como era antes. Ela só precisa de um motivo pra acreditar de novo. Dá tempo sim, mas você precisa agir agora, porque cada dia que passa ela se acostuma mais a viver sem.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 3 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>E se eu tentar e falhar de novo?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Quando suas veias estão limpas e o sangue flui direito, você não precisa mais pensar em ter ereção. Ela simplesmente acontece.</p>
+                                <p>Vai ser automático, como era quando você tinha vinte anos. E depois da primeira vez que você transar direito, a confiança volta. O Lord Vigor não te dá só ereção, te devolve a paz de ser homem sem medo.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 4 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Como vou gerar minha fórmula personalizada?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Após a confirmação do pagamento, você será redirecionado para nosso aplicativo, onde responderá um questionário informando seu peso, idade e altura, além de perguntas sobre o resultado que você quer atingir.</p>
+                                <p>Se você for ruim com tecnologia, não tem problema. Nossa equipe entrará em contato pelo WhatsApp e você poderá responder o questionário por lá.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 5 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Tenho diabetes, pressão alta, colesterol... posso usar?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Por isso mesmo que o questionário pergunta sobre seu histórico de saúde. A fórmula é calculada especificamente para o seu corpo, considerando qualquer condição que você tenha.</p>
+                                <p>Não é uma dose genérica igual Viagra, que pode te dar um infarto a qualquer momento. É algo feito especialmente para você.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 6 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Não quero aumentar o tamanho do pênis, só quero potência. Tem problema?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Super tranquilo. Basta responder no questionário que você não quer aumento peniano. E pronto, sua fórmula será ajustada para focar apenas na potência e resistência.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 7 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Sou ruim com tecnologia. E se eu não conseguir baixar o aplicativo?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não tem problema. Assim que você confirmar o pagamento, nossa equipe de especialistas entrará em contato no WhatsApp e lá você poderá responder o questionário por lá. Simples assim.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 8 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>A fórmula demora para ficar pronta?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não, a fórmula leva menos de um dia para ficar pronta, pois já temos os ingredientes importados e armazenados na nossa fábrica.</p>
+                                <p>Nós só precisamos preparar os ingredientes na dosagem certa para o seu caso e pronto.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 9 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Em quanto tempo chega?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Nossos prazos de entrega variam de 3 a 6 dias úteis, dependendo da sua região. A embalagem é totalmente discreta.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 10 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>E se minha esposa descobrir?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Fique tranquilo, pois a embalagem é totalmente discreta. Caixa simples, sem nada escrito sobre o conteúdo.</p>
+                                <p>Na fatura do cartão, aparece só "COMPRA ONLINE". Ninguém vai saber o que é. Nem o entregador, nem sua mulher, nem ninguém.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 11 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>O Lord Vigor é vendido em farmácia ou em lojas físicas?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não. O Lord Vigor só está disponível nesta página oficial. Não é vendido em farmácias nem no Mercado Livre.</p>
+                                <p>Como ele é um produto personalizado para cada homem, é impossível existir um produto padrão nas prateleiras. Se encontrar fora deste site, pode ter certeza que é falsificado. Não compre, pois pode colocar sua saúde em risco.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 12 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Ainda não acredito, doutor.</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Você tem todo o direito de desconfiar. A internet tá cheia de picareta vendendo pílula milagrosa que não funciona. Mas me responde uma coisa:</p>
+                                <p>Picareta te dá acompanhamento individual no WhatsApp com equipe real? Picareta mostra endereço físico da fábrica? Picareta te dá 600 dias de garantia com certificado oficial que tem valor legal?</p>
+                                <p>Golpista quer seu dinheiro e some. Eu quero seu resultado.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 13 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Como devo tomar o Lord Vigor?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Basta pingar a quantidade de gotas indicada embaixo da língua, uma vez ao dia antes de dormir, e aguardar os efeitos. Mais fácil, impossível.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 14 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>Quantos frascos devo pedir?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Os melhores resultados surgem quando você usa o Lord Vigor por mais tempo. Dessa forma, ele tem tempo suficiente para limpar suas veias completamente e criar a proteção permanente.</p>
+                                <p>Por isso, recomendamos fortemente que você aproveite os pacotes de desconto de 5 ou 10 frascos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pergunta 15 -->
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <span>O que eu faço agora?</span>
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Escolha o seu kit acima e clique no botão escrito "COMPRAR AGORA!".</p>
+                                <p>Na próxima página, basta preencher as suas informações e dizer para onde devemos enviar o seu pedido do Lord Vigor. Após o pagamento, você receberá o questionário para personalizarmos sua fórmula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="ref-box">
+                    <div class="ref-head">Referências Científicas</div>
+                    <img src="referencias-cientificas.png" alt="Referências" class="ref-img">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="btm-bar">
+        <div class="btm-container">
+            <div class="btm-legal">
+                <div>© 2026 Todos os direitos reservados.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function genRandomStats() {
+            return Math.floor(Math.random() * (920 - 700 + 1)) + 700;
+        }
+
+        function getCurrentFormattedDate() {
+            const d = new Date();
+            const day = String(d.getDate()).padStart(2, '0');
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const year = d.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        const elUserCount = document.getElementById('liveUserDisplay');
+        const elDateLimit = document.getElementById('limitDateDisplay');
+
+        if(elUserCount) elUserCount.textContent = genRandomStats();
+        if(elDateLimit) elDateLimit.textContent = getCurrentFormattedDate();
+
+        setInterval(function() {
+            if(elUserCount) elUserCount.textContent = genRandomStats();
+        }, Math.random() * 5000 + 5000);
+    </script>
+
+    <!-- FAQ Accordion -->
+    <script>
+        document.querySelectorAll('.faq-pergunta').forEach(function(pergunta) {
+            pergunta.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('ativo');
+            });
+        });
+    </script>
+</body>
+</html>
