@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação</title> <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Fundo branco para mesclar com o print */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* O Link vira um container para a imagem */
+        a.image-link {
+            display: block;
+            max-width: 600px; /* Largura máxima para não estourar no PC */
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none; /* Remove sublinhado se houver */
+        }
+
+        /* A Imagem ocupa 100% do link */
+        a.image-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+        }
+
+        /* O Abismo do Rodapé */
+        .the-abyss {
+            height: 800px;
+            width: 100%;
+        }
+
+        footer {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            color: #ccc;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        
+        footer a { color: #ccc; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <a href="aula.html" id="link-print" class="image-link">
+        <img src="print_tela.jpg" alt="Conteúdo">
+    </a>
+
+    <div class="the-abyss"></div>
+
+    <footer>
+        <p>
+            Copyright © 2024.<br>
+            CNPJ: 00.000.000/0001-00<br>
+            <a href="#">Termos</a> | <a href="#">Privacidade</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var urlParams = window.location.search;
+            var link = document.getElementById("link-print");
+            
+            if (urlParams) {
+                if (link.href.indexOf('?') > -1) {
+                    link.href += "&" + urlParams.substring(1);
+                } else {
+                    link.href += urlParams;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
