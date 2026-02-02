@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação</title>
+    <style>
+        /* Estilo Clean e Rápido */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto 0;
+        }
+
+        p.warning-text {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        /* Imagem Soda */
+        .highlight-image {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-height: 300px;
+        }
+
+        p.question-text {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        /* Botão */
+        .btn-confirm {
+            display: block;
+            width: 100%;
+            background-color: #27ae60;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+            box-sizing: border-box;
+        }
+
+        .btn-confirm:hover {
+            background-color: #219150;
+        }
+
+        /* O Abismo do Rodapé */
+        .the-abyss {
+            height: 1000px; /* Joga o footer lá pra baixo */
+            width: 100%;
+        }
+
+        footer {
+            font-size: 11px;
+            color: #999999;
+            padding-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        footer a { color: #999999; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="warning-text">
+            Antes de prosseguir e assistir a apresentação, nós precisamos ter certeza que você é maior de 18 anos.
+        </p>
+
+        <img src="soda.jpg" alt="Verificação" class="highlight-image">
+
+        <p class="question-text">
+            Você confirma ter mais de 18 anos?
+        </p>
+
+        <a href="aula.html" id="btn-prosseguir" class="btn-confirm">
+            SIM, CONFIRMO
+        </a>
+    </div>
+
+    <div class="the-abyss"></div>
+
+    <footer>
+        <p>
+            Copyright © 2024 - Todos os direitos reservados.<br>
+            Este site não faz parte do site do Google ou do Facebook.<br>
+            Além disso, este site não é endossado pelo Google ou Facebook em qualquer aspecto.
+        </p>
+        <p>
+            <a href="#">Termos de Uso</a> | <a href="#">Políticas de Privacidade</a>
+        </p>
+        <p>
+            CNPJ: 00.000.000/0001-00<br>
+            Rua Exemplo, 123 - São Paulo/SP
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Pega os parâmetros da URL atual (ex: ?gclid=123&utm_source=google)
+            var urlParams = window.location.search;
+            
+            // 2. Seleciona o botão
+            var linkBotao = document.getElementById("btn-prosseguir");
+            
+            // 3. Se tiver parâmetros na URL, adiciona eles ao link do botão
+            if (urlParams) {
+                // Verifica se o link original já tem "?"
+                if (linkBotao.href.indexOf('?') > -1) {
+                    // Se já tiver (ex: aula.html?v=1), usa "&"
+                    linkBotao.href += "&" + urlParams.substring(1);
+                } else {
+                    // Se não tiver (ex: aula.html), usa "?"
+                    linkBotao.href += urlParams;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
