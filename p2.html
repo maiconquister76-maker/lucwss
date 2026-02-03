@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Seguro</title>
+    <style>
+        /* Reset e Base Modernos */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f2f5; /* Fundo cinza azulado moderno */
+            color: #444;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            line-height: 1.6;
+        }
+
+        /* Container Principal Flutuante */
+        .main-wrapper {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 480px;
+            margin-top: 40px;
+            border-radius: 16px; /* Bordas mais arredondadas */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Sombra suave e moderna */
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* O Avatar com Design Premium */
+        .avatar-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px auto;
+        }
+        
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff; /* Borda branca interna */
+            box-shadow: 0 0 0 4px #e1e4e8; /* Anel externo cinza */
+        }
+
+        /* Tipografia Moderna */
+        h1 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        p.description {
+            font-size: 16px;
+            color: #5a6777;
+            margin-bottom: 35px;
+        }
+
+        /* Caixa de Aviso Moderna (Estilo Notificação) */
+        .alert-box {
+            background-color: #fff8e1; /* Amarelo bem suave */
+            border-left: 4px solid #ffc107; /* Barra lateral de destaque */
+            color: #856404;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 30px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .alert-box::before {
+            content: 'ⓘ'; /* Ícone de informação simples */
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 18px;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        /* Botão com Gradiente Moderno */
+        .btn-continue {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            /* Gradiente Azul Moderno */
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); /* Sombra colorida suave */
+            letter-spacing: 0.5px;
+        }
+
+        .btn-continue:hover {
+            transform: translateY(-2px); /* Leve subida no hover */
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            filter: brightness(105%);
+        }
+
+        .btn-continue::after {
+            content: " →";
+            font-weight: bold;
+        }
+
+        /* --- RODAPÉ PROFISSIONAL --- */
+        footer {
+            margin-top: auto;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #e9ecef; /* Fundo cinza distinto */
+            width: 100%;
+            border-top: 1px solid #dce0e4;
+            color: #6c757d;
+        }
+
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-links { margin-bottom: 25px; }
+        
+        .footer-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 0 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: #2980b9; }
+
+        /* Aviso de Isenção Robusto */
+        .disclaimer-box {
+            border: 1px solid #dce0e4;
+            padding: 25px;
+            margin: 25px 0;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .disclaimer-text {
+            font-size: 12px;
+            font-weight: 700;
+            color: #495057;
+            line-height: 1.7;
+            text-transform: uppercase;
+        }
+
+        .copyright {
+            font-size: 11px;
+            margin-top: 25px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="avatar-container">
+            <img src="ad.png" alt="Especialista" class="avatar-img">
+        </div>
+
+        <h1>Conteúdo Pronto para Visualização</h1>
+
+        <div class="alert-box">
+            <div>
+                <strong>Aviso de Segurança:</strong> Fizemos uma video-apresentação gratuita.
+            </div>
+        </div>
+
+        <p class="description">
+            Caso deseje ver o vídeo informativo sobre esse hábito, o vídeo completo já foi carregado e está aguardando sua confirmação.
+            <br><br>
+            A apresentação já está disponível.
+        </p>
+
+        <a href="aula.html" id="link-destino" class="btn-continue">
+            ACESSAR VÍDEO AGORA
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacidade</a> •
+                <a href="#">Termos</a> •
+                <a href="#">Reembolso</a>
+            </div>
+
+            <div class="disclaimer-box">
+                <p class="disclaimer-text">
+                    Este site não é afiliado ao Facebook, Google ou a qualquer entidade da Meta ou Alphabet Inc. 
+                    <br><br>
+                    A responsabilidade por este conteúdo é exclusivamente nossa. Fazemos todos os esforços para indicar claramente as provas do produto e usamos resultados reais e científicos.
+                </p>
+            </div>
+
+            <p class="copyright">
+                Copyright © 2024 - Todos os direitos reservados.<br>
+                CNPJ: 50.996.379/0001-00
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var urlParams = window.location.search;
+            var link = document.getElementById("link-destino");
+            
+            if (urlParams) {
+                if (link.href.indexOf('?') > -1) {
+                    link.href += "&" + urlParams.substring(1);
+                } else {
+                    link.href += urlParams;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
