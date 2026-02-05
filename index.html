@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método do bicarbonato sódio</title>
+    <title>Método do bicarbonato sódio0</title>
     
     <!-- Vturb Performance Optimization -->
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
@@ -1367,18 +1367,12 @@
     <!-- URL Parameters Passthrough + Meta Events -->
     <script>
         (function() {
-            // Parâmetros importantes para tracking
-            var trackingParams = ['fbclid', 'gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'ad_id', 'adset_id', 'campaign_id', 'placement', 'site_source_name'];
-            
-            // Captura parâmetros da URL atual
+            // Captura TODOS os parâmetros da URL atual
             var urlParams = new URLSearchParams(window.location.search);
             var paramsToPass = {};
             
-            trackingParams.forEach(function(param) {
-                var value = urlParams.get(param);
-                if (value) {
-                    paramsToPass[param] = value;
-                }
+            urlParams.forEach(function(value, key) {
+                paramsToPass[key] = value;
             });
             
             // Salva fbclid no cookie _fbc (formato Meta)
