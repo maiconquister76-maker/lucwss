@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método do bicarbonato sódio0</title>
+    <title>Método do bicarbonato sódio</title>
+    
+    <!-- CAPTURA IMEDIATA DE PARÂMETROS (antes do VTurb limpar a URL) -->
+    <script>
+    (function(){
+        var params = {};
+        var urlParams = new URLSearchParams(window.location.search);
+        urlParams.forEach(function(value, key) {
+            params[key] = value;
+        });
+        window._savedUrlParams = params;
+    })();
+    </script>
     
     <!-- Vturb Performance Optimization -->
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
@@ -1367,16 +1379,11 @@
     <!-- URL Parameters Passthrough + Meta Events -->
     <script>
         (function() {
-            // Captura TODOS os parâmetros da URL atual
-            var urlParams = new URLSearchParams(window.location.search);
-            var paramsToPass = {};
-            
-            urlParams.forEach(function(value, key) {
-                paramsToPass[key] = value;
-            });
+            // Usa os parâmetros salvos no início (antes do VTurb limpar a URL)
+            var paramsToPass = window._savedUrlParams || {};
             
             // Salva fbclid no cookie _fbc (formato Meta)
-            var fbclid = urlParams.get('fbclid');
+            var fbclid = paramsToPass['fbclid'];
             if (fbclid) {
                 var fbc = 'fb.1.' + Date.now() + '.' + fbclid;
                 document.cookie = '_fbc=' + fbc + '; max-age=7776000; path=/; SameSite=Lax';
